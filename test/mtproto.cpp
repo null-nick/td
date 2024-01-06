@@ -91,7 +91,8 @@ TEST(Mtproto, GetHostByNameActor) {
                                     "0x7f.001",
                                     "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
                                     "[2001:0db8:85a3:0000:0000:8a2e:0370:7334]",
-                                    "[[2001:0db8:85a3:0000:0000:8a2e:0370:7334]]"};
+                                    "[[2001:0db8:85a3:0000:0000:8a2e:0370:7334]]",
+                                    "192.168.0.101"};
     for (const auto &types :
          {td::vector<td::GetHostByNameActor::ResolverType>{td::GetHostByNameActor::ResolverType::Native},
           td::vector<td::GetHostByNameActor::ResolverType>{td::GetHostByNameActor::ResolverType::Google},
@@ -255,9 +256,9 @@ class TestPingActor final : public td::Actor {
 static td::IPAddress get_default_ip_address() {
   td::IPAddress ip_address;
 #if TD_EMSCRIPTEN
-  ip_address.init_host_port("venus.web.telegram.org/apiws", 443).ensure();
+  ip_address.init_host_port("192.168.0.101", 4430).ensure();
 #else
-  ip_address.init_ipv4_port("149.154.167.40", 80).ensure();
+  ip_address.init_ipv4_port("192.168.0.101", 4430).ensure();
 #endif
   return ip_address;
 }
