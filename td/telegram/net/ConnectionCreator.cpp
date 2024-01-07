@@ -1234,9 +1234,9 @@ DcOptions ConnectionCreator::get_default_dc_options(bool is_test) {
     add_ip_ports(2, {"192.168.0.101"}, ports);
     add_ip_ports(3, {"192.168.0.101"}, ports);
 
-    add_ip_ports(1, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(2, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(3, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(1, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(2, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(3, {"192.168.0.101"}, ports, HostType::IPv6);
   } else {
     add_ip_ports(1, {"192.168.0.101"}, ports);
     add_ip_ports(2, {"192.168.0.101", "192.168.0.101"}, ports);
@@ -1244,11 +1244,11 @@ DcOptions ConnectionCreator::get_default_dc_options(bool is_test) {
     add_ip_ports(4, {"192.168.0.101"}, ports);
     add_ip_ports(5, {"192.168.0.101"}, ports);
 
-    add_ip_ports(1, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(2, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(3, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(4, {"192.168.0.101"}, ports, HostType::IPv6);
-    add_ip_ports(5, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(1, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(2, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(3, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(4, {"192.168.0.101"}, ports, HostType::IPv6);
+    // add_ip_ports(5, {"192.168.0.101"}, ports, HostType::IPv6);
   }
 #endif
   return res;
